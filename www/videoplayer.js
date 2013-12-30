@@ -6,8 +6,8 @@
 		this.url = null;
 	}
 
-	VideoPlayer.prototype.play = function(url) {
-		exec(null, null, "VideoPlayer", "playVideo", [url]);
+	VideoPlayer.prototype.play = function(url, onSuccess, onError) {
+		exec(onSuccess, onError, "VideoPlayer", "playVideo", [url]);
 	};
 
 	var videoPlayer = new VideoPlayer();
